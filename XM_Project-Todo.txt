@@ -1,6 +1,13 @@
 - Logbog
-- Matematisk retfærdigærelse for Catalan og Borel trekant i RREF
-- Udvikle godt program til at lave udregninger i A(d) (mere specifikt, en rutine der kan tjekke om givet en liste
-af kandidater for et generating set finder en matrix som i eksemplet og tjekker invertabilitet)
+- Matematisk retfærdiggoerelse for Catalan og Borel trekant i RREF
+- Indføre gangetabel og brug den for hurtigere udregninger i A(d)
+- Lav coefficient matrix of experiment om til funktioner
+
+Work in progress
+- Udvikle godt program til at lave udregninger i A(d) (mere specifikt, en rutine der kan tjekke om givet en liste af kandidater for et generating set finder en matrix som i eksemplet og tjekker invertabilitet)
+
+
+Completed:
 - Vektorrumsdimension af A(d) (antal ækvivlanesklasser?)
+   Antallet af partitioner af d
 - 
