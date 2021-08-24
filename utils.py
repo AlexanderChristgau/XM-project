@@ -2,6 +2,9 @@ import numpy as np
 from math import factorial as fact
 
 
+alphabet = "abcdefghijklmnopq" 
+
+
 def norm(a):
     return ((1+np.arange(len(a)))*a).sum()
 
@@ -55,6 +58,32 @@ def to_ctype(l):
         answer[i-1] += 1
     return tuple(answer)
 
+
+
 def generate_cycletypes(d):
     return (to_ctype(partition) for partition in accel_asc(d))
 
+
+
+# Turns monomial "aa" into "a^2" etc.
+def format_monomname(string):
+    counts = {c:0 for c in alphabet}
+    for char in string:
+        counts[char] +=1
+    s = ""
+    for char in alphabet:
+        if counts[char] == 1:
+            s += char
+        elif counts[char]>1:
+            s += char + "^{" + str(counts[char]) + "}"
+    return s
+
+
+
+# Computes norm from label in order to sort monomials
+def get_norm(monomname):
+    answer = 0
+    D = {c:(i+1) for i,c in enumerate(alphabet)}
+    for char in monomname:
+        answer += D[char]
+    return answer
